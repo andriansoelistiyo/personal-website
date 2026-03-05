@@ -1,0 +1,72 @@
+12:06:30 PM: Netlify Build                                                 
+12:06:30 PM: ────────────────────────────────────────────────────────────────
+12:06:30 PM: ​
+12:06:30 PM: ❯ Version
+12:06:30 PM:   @netlify/build 35.8.6
+12:06:30 PM: ​
+12:06:30 PM: ❯ Flags
+12:06:30 PM:   accountId: 609fa4c56e862aae48306f9e
+12:06:30 PM:   baseRelDir: true
+12:06:30 PM:   buildId: 69a90f3856d2d1657c8dc78c
+12:06:30 PM:   deployId: 69a90f3856d2d1657c8dc78e
+12:06:30 PM: ​
+12:06:30 PM: ❯ Current directory
+12:06:30 PM:   /opt/build/repo
+12:06:30 PM: ​
+12:06:30 PM: ❯ Config file
+12:06:30 PM:   No config file was defined: using default values.
+12:06:30 PM: ​
+12:06:30 PM: ❯ Context
+12:06:30 PM:   production
+12:06:30 PM: ​
+12:06:30 PM: Build command from Netlify app                                
+12:06:30 PM: ────────────────────────────────────────────────────────────────
+12:06:30 PM: ​
+12:06:30 PM: $ npm run build
+12:06:30 PM: > my-personal-website@1.0.0 build
+12:06:30 PM: > nuxt build
+12:06:33 PM: node:internal/crypto/hash:69
+12:06:33 PM:   this[kHandle] = new _Hash(algorithm, xofLen);
+12:06:33 PM:                   ^
+12:06:33 PM: Error: error:0308010C:digital envelope routines::unsupported
+12:06:33 PM:     at new Hash (node:internal/crypto/hash:69:19)
+12:06:33 PM:     at Object.createHash (node:crypto:133:10)
+12:06:33 PM:     at module.exports (/opt/build/repo/node_modules/webpack/lib/util/createHash.js:135:53)
+12:06:33 PM:     at NormalModule._initBuildHash (/opt/build/repo/node_modules/webpack/lib/NormalModule.js:417:16)
+12:06:33 PM:     at handleParseError (/opt/build/repo/node_modules/webpack/lib/NormalModule.js:471:10)
+12:06:33 PM:     at /opt/build/repo/node_modules/webpack/lib/NormalModule.js:503:5
+12:06:33 PM:     at /opt/build/repo/node_modules/webpack/lib/NormalModule.js:358:12
+12:06:33 PM:     at /opt/build/repo/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+12:06:33 PM:     at iterateNormalLoaders (/opt/build/repo/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+12:06:33 PM:     at Array.<anonymous> (/opt/build/repo/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:205:4)
+12:06:33 PM:     at Storage.finished (/opt/build/repo/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:55:16)
+12:06:33 PM:     at /opt/build/repo/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:91:9
+12:06:33 PM:     at /opt/build/repo/node_modules/graceful-fs/graceful-fs.js:123:16
+12:06:33 PM:     at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3) {
+12:06:33 PM:   opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+12:06:33 PM:   library: 'digital envelope routines',
+12:06:33 PM:   reason: 'unsupported',
+12:06:33 PM:   code: 'ERR_OSSL_EVP_UNSUPPORTED'
+12:06:33 PM: }
+12:06:33 PM: Node.js v18.20.8
+12:06:33 PM: ​
+12:06:33 PM: "build.command" failed                                        
+12:06:33 PM: ────────────────────────────────────────────────────────────────
+12:06:33 PM: ​
+12:06:33 PM:   Error message
+12:06:33 PM:   Command failed with exit code 1: npm run build (https://ntl.fyi/exit-code-1)
+12:06:33 PM: ​
+12:06:33 PM:   Error location
+12:06:33 PM:   In Build command from Netlify app:
+12:06:33 PM:   npm run build
+12:06:33 PM: ​
+12:06:33 PM:   Resolved config
+12:06:33 PM:   build:
+12:06:33 PM:     command: npm run build
+12:06:33 PM:     commandOrigin: ui
+12:06:33 PM:     publish: /opt/build/repo/dist
+12:06:33 PM:     publishOrigin: ui
+12:06:33 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+12:06:33 PM: Failing build: Failed to build site
+12:06:33 PM: Finished processing build request in 32.309s
+12:06:33 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)

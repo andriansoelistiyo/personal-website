@@ -1,0 +1,75 @@
+11:57:38 AM: Netlify Build                                                 
+11:57:38 AM: ────────────────────────────────────────────────────────────────
+11:57:38 AM: ​
+11:57:38 AM: ❯ Version
+11:57:38 AM:   @netlify/build 35.8.6
+11:57:38 AM: ​
+11:57:38 AM: ❯ Flags
+11:57:38 AM:   accountId: 609fa4c56e862aae48306f9e
+11:57:38 AM:   baseRelDir: true
+11:57:38 AM:   buildId: 69a90d202ce591427469676c
+11:57:38 AM:   deployId: 69a90d202ce591427469676e
+11:57:38 AM: ​
+11:57:38 AM: ❯ Current directory
+11:57:38 AM:   /opt/build/repo
+11:57:38 AM: ​
+11:57:38 AM: ❯ Config file
+11:57:38 AM:   No config file was defined: using default values.
+11:57:38 AM: ​
+11:57:38 AM: ❯ Context
+11:57:38 AM:   production
+11:57:38 AM: ​
+11:57:38 AM: Build command from Netlify app                                
+11:57:38 AM: ────────────────────────────────────────────────────────────────
+11:57:38 AM: ​
+11:57:38 AM: $ npm run generate
+11:57:38 AM: > my-personal-website@1.0.0 generate
+11:57:38 AM: > nuxt generate
+11:57:41 AM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+11:57:41 AM: node:internal/crypto/hash:101
+11:57:41 AM:   this[kHandle] = new _Hash(algorithm, xofLen, algorithmId, getHashCache());
+11:57:41 AM:                   ^
+11:57:41 AM: Error: error:0308010C:digital envelope routines::unsupported
+11:57:41 AM:     at new Hash (node:internal/crypto/hash:101:19)
+11:57:41 AM:     at Object.createHash (node:crypto:139:10)
+11:57:41 AM:     at module.exports (/opt/build/repo/node_modules/webpack/lib/util/createHash.js:135:53)
+11:57:41 AM:     at NormalModule._initBuildHash (/opt/build/repo/node_modules/webpack/lib/NormalModule.js:417:16)
+11:57:41 AM:     at handleParseError (/opt/build/repo/node_modules/webpack/lib/NormalModule.js:471:10)
+11:57:41 AM:     at /opt/build/repo/node_modules/webpack/lib/NormalModule.js:503:5
+11:57:41 AM:     at /opt/build/repo/node_modules/webpack/lib/NormalModule.js:358:12
+11:57:41 AM:     at /opt/build/repo/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+11:57:41 AM:     at iterateNormalLoaders (/opt/build/repo/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+11:57:41 AM:     at Array.<anonymous> (/opt/build/repo/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:205:4)
+11:57:41 AM:     at Storage.finished (/opt/build/repo/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:55:16)
+11:57:41 AM:     at /opt/build/repo/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:91:9
+11:57:41 AM:     at /opt/build/repo/node_modules/graceful-fs/graceful-fs.js:123:16
+11:57:41 AM:     at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read/context:68:3) {
+11:57:41 AM:   opensslErrorStack: [
+11:57:41 AM:     'error:03000086:digital envelope routines::initialization error',
+11:57:41 AM:     'error:0308010C:digital envelope routines::unsupported'
+11:57:41 AM:   ],
+11:57:41 AM:   library: 'digital envelope routines',
+11:57:41 AM:   reason: 'unsupported',
+11:57:41 AM:   code: 'ERR_OSSL_EVP_UNSUPPORTED'
+11:57:41 AM: }
+11:57:41 AM: Node.js v22.22.0
+11:57:41 AM: ​
+11:57:41 AM: "build.command" failed                                        
+11:57:41 AM: ────────────────────────────────────────────────────────────────
+11:57:41 AM: ​
+11:57:41 AM:   Error message
+11:57:41 AM:   Command failed with exit code 1: npm run generate (https://ntl.fyi/exit-code-1)
+11:57:41 AM: ​
+11:57:41 AM:   Error location
+11:57:41 AM:   In Build command from Netlify app:
+11:57:41 AM:   npm run generate
+11:57:41 AM: ​
+11:57:41 AM:   Resolved config
+11:57:41 AM:   build:
+11:57:41 AM:     command: npm run generate
+11:57:41 AM:     commandOrigin: ui
+11:57:41 AM:     publish: /opt/build/repo/dist
+11:57:41 AM:     publishOrigin: ui
+11:57:41 AM: Build failed due to a user error: Build script returned non-zero exit code: 2
+11:57:41 AM: Failing build: Failed to build site
+11:57:41 AM: Finished processing build request in 36.079s
