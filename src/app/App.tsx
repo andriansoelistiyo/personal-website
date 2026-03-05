@@ -102,12 +102,21 @@ function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <title>Andrian Soelistiyo - UI/UX Designer Portfolio</title>
         <meta name="description" content="UI/UX Designer specializing in transforming complex systems into intuitive interfaces. 6+ years experience in product design with focus on clarity and user-centered solutions." />
         <meta name="keywords" content="UI/UX Designer, Product Designer, User Experience, Interface Design, Portfolio, Andrian Soelistiyo" />
         <meta name="author" content="Andrian Soelistiyo" />
         <link rel="canonical" href="https://andriansoelistiyo.netlify.app/" />
+        
+        {/* Favicon */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        
+        {/* Preconnect for Performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -115,6 +124,8 @@ function HomePage() {
         <meta property="og:title" content="Andrian Soelistiyo - UI/UX Designer Portfolio" />
         <meta property="og:description" content="UI/UX Designer specializing in transforming complex systems into intuitive interfaces. 6+ years experience in product design." />
         <meta property="og:image" content="https://andriansoelistiyo.netlify.app/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -127,6 +138,7 @@ function HomePage() {
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
+        <meta name="theme-color" content="#000000" />
         
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ3R7N3PB5"></script>

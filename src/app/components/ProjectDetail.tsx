@@ -131,11 +131,20 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
   
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language }}>
         <title>{project.title} - Andrian Soelistiyo | UI/UX Designer</title>
         <meta name="description" content={projectDescription} />
         <meta name="keywords" content={`${project.title}, UI/UX Design, Case Study, ${projectRole}, Andrian Soelistiyo`} />
         <link rel="canonical" href={projectUrl} />
+        
+        {/* Favicon */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        
+        {/* Preconnect for Performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
@@ -143,6 +152,8 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
         <meta property="og:title" content={`${project.title} - Andrian Soelistiyo`} />
         <meta property="og:description" content={projectDescription} />
         <meta property="og:image" content={project.thumbnailImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -150,6 +161,10 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
         <meta property="twitter:title" content={`${project.title} - Andrian Soelistiyo`} />
         <meta property="twitter:description" content={projectDescription} />
         <meta property="twitter:image" content={project.thumbnailImage} />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#000000" />
         
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ3R7N3PB5"></script>

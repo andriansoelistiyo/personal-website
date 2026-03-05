@@ -1,52 +1,46 @@
-# Netlify Configuration File
-# For more info: https://docs.netlify.com/configure-builds/file-based-configuration/
+# Netlify Configuration
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  # Build command to run
   command = "npm run build"
-  
-  # Directory that contains the deploy-ready HTML files and assets
   publish = "dist"
-  
-  # Set Node.js version
-  environment = { NODE_VERSION = "18" }
 
-# Redirect rules are also specified in /public/_redirects
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Build settings
+[build.environment]
+  NODE_VERSION = "18"
 
-# Headers for better security and performance
+# Headers
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-# Cache static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache images
 [[headers]]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Don't cache HTML files
 [[headers]]
-  for = "/*.html"
+  for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Don't cache service worker
 [[headers]]
-  for = "/sw.js"
+  for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 404 page
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
