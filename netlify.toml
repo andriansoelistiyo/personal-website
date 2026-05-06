@@ -2,11 +2,7 @@
   publish = "dist"
   command = "pnpm build"
 
-# Prerendering for SEO - pre-render all routes at build time
-[[plugins]]
-  package = "@netlify/plugin-prerender-spa"
-
-# Auto-generate sitemap from pre-rendered pages
+# Auto-generate sitemap
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
