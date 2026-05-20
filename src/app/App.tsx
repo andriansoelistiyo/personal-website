@@ -7,6 +7,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { trackDownloadResume, trackContactClick, trackProjectCardClick } from './utils/analytics';
 import { ScrollReveal } from './components/ScrollReveal';
+import { MediumArticles } from './components/MediumArticles';
 
 // Lazy load ProjectDetail component
 const ProjectDetail = lazy(() => import('./components/ProjectDetail').then(module => ({ default: module.ProjectDetail })));
@@ -228,6 +229,9 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Latest Writing Section */}
+      <MediumArticles />
 
       {/* Resume Section */}
       <section className="max-w-[1200px] mx-auto px-6 md:px-12 py-24 md:py-32 border-t border-neutral-200">
