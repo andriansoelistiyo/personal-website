@@ -56,51 +56,34 @@ export function MediumArticles() {
         </h2>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      <div className="space-y-8">
         {articles.map((article, index) => (
           <ScrollReveal key={article.link} delay={index * 0.1}>
             <div
-              className="group cursor-pointer"
+              className="group cursor-pointer flex items-start justify-between gap-6 py-4 border-b border-neutral-200 last:border-b-0"
               onClick={() => handleArticleClick(article.link)}
             >
-              <div className="space-y-3">
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-xl font-normal text-black group-hover:underline decoration-1 underline-offset-4 flex-1">
-                    {article.title}
-                  </h3>
-                  <ExternalLink className="w-5 h-5 text-neutral-400 group-hover:text-black transition-colors flex-shrink-0 mt-1" />
-                </div>
-
+              <div className="flex-1 space-y-2">
+                <h3 className="text-xl font-normal text-black group-hover:underline decoration-1 underline-offset-4">
+                  {article.title}
+                </h3>
                 <p className="text-sm text-neutral-600 font-light">
                   {formatArticleDate(article.pubDate)}
                 </p>
-
                 {article.description && (
-                  <p className="text-base text-neutral-700 leading-relaxed font-light line-clamp-3">
+                  <p className="text-base text-neutral-700 leading-relaxed font-light line-clamp-2">
                     {article.description}
                   </p>
                 )}
-
-                {article.categories && article.categories.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {article.categories.slice(0, 3).map((category) => (
-                      <span
-                        key={category}
-                        className="text-xs text-neutral-500 px-2 py-1 border border-neutral-300 font-light"
-                      >
-                        {category}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </div>
+              <ExternalLink className="w-5 h-5 text-neutral-400 group-hover:text-black transition-colors flex-shrink-0 mt-1" />
             </div>
           </ScrollReveal>
         ))}
       </div>
 
       <ScrollReveal delay={0.4}>
-        <div className="mt-12 text-center">
+        <div className="mt-12">
           <a
             href="https://andriansoelistiyo.medium.com/"
             target="_blank"
